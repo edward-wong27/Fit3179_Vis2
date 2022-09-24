@@ -10,23 +10,32 @@
   <script>
     const spec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height": 400,
+  "width": 2000,
+  "height": 1000,
   "title": "Victorian Crashes",
   "projection": {"type": "equalEarth"},
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/edward-wong27/Git_Repository/main/vic_localities.json?token=GHSAT0AAAAAABZDU2HMEFZQU4DXSRFI2DEWYZOPEDQ",
+        "url": "https://raw.githubusercontent.com/edward-wong27/Git_Repository/main/vic_localities.topojson?token=GHSAT0AAAAAABZDU2HMDBXJZ44XXJYUFHQOYZOT75A",
         "format": {"type": "topojson", "feature": "vic_localities"}
       },
-      "mark": {"type": "geoshape", "fill": "skyblue", "stroke": "white"}
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/edward-wong27/Git_Repository/main/NODE.csv?token=GHSAT0AAAAAABZDU2HN4CKBGLNMQOHLT3EGYZOPJUQ"
+        "url": "https://raw.githubusercontent.com/edward-wong27/Git_Repository/main/NODE.csv?token=GHSAT0AAAAAABZDU2HMBFK3QP24FEILOEHOYZOUHBA"
       },
-      "mark": {"type": "circle"}
+      "mark": {"type": "circle"},
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "color": {
+          "field": "LGA_NAME",
+          "type": "nominal",
+          "scale": {"scheme": "reds"}
+        }
+      }
     }
   ],
   "config": {}
