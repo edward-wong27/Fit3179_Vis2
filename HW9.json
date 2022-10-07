@@ -7,14 +7,14 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/edward-wong27/Git_Repository/main/vic_localities.topojson",
+        "url": "https://raw.githubusercontent.com/edward-wong27/Fit3179_Vis2/main/css/vic_localities.topojson",
         "format": {"type": "topojson", "feature": "vic_localities"}
       },
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/edward-wong27/Git_Repository/main/data/NODE.csv"
+        "url": "https://raw.githubusercontent.com/edward-wong27/Fit3179_Vis2/main/data/NODE.csv"
       },
       "mark": {"type": "circle", "tooltip": {"content": "data"}},
       "encoding": {
