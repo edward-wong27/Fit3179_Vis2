@@ -1,19 +1,43 @@
 <!DOCTYPE html>
-<html lang="'en">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-<script src="HW9.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Vega packages -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="HW9.js"></script>
+    
+    <!-- Pure Css-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+
+    <!-- Google's Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+   
+    </style>
 </head>
 
 <body>
-  <h1> This is a map</h1>
-  <div id="map"/>
-  <div id="map1"/>
+  <div class="page">
+    <div class = "pure-g">
+      <div class = "pure-u-1-1">
+        <h1> Locations of Car Crashes Around Victoria</h1>
+        <p>This map  highlights all the locations that crashes have occured around victoria from 2000 - 2005</p> 
+      <div id="map" class="vis-container"></div>
+      <div class = "pure-u-2-1">
+        <h1>Total Crashes per Month</h1>
+        <p>This bar chart shows the total crashes per month from 2000 - 2005</p>
+      <div id="Bar" class="vis-container"></div>
+
+      </div>
+    
+    </div>
+  </div>
 </body>
 </html>
