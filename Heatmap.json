@@ -1,13 +1,19 @@
-{{
+{
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height":500,
+    "width":300,
     "data": {"url": "https://raw.githubusercontent.com/edward-wong27/Fit3179_Vis2/main/data/PERSON.csv"},
     "mark": "rect",
     "encoding": {
       "y": {"field": "AgeGroup", "type": "ordinal"},
       "x": {"field": "INJ_LEVEL", "type": "ordinal"},
-      "color": {"aggregate": "count", "field": "INJ_LEVEL"}
-    },
+      "color": {"aggregate": "count", "field": "INJ_LEVEL"},
+    
     "config": {
       "axis": {"grid": true, "tickBand": "extent"}
+    },
+    "tooltip":[
+        {"aggregate": "count", "type": "quantitative", "title": "Crash Count"}
+      ]
     }
-  }
+}
