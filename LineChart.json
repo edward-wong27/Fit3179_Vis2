@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "Stock prices of 5 Tech Companies over Time.",
-    "data": {"url": "https://raw.githubusercontent.com/edward-wong27/Fit3179_Vis2/main/data/ACCIDENT.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/edward-wong27/Fit3179_Vis2/main/data/New.csv","format": {"parse": {"Date": "utc:'%e/%m/%Y'"}}},
 "vconcat":[
   {
     "width": 1000,

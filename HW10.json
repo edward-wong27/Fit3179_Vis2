@@ -2,8 +2,9 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 900,
   "height": 600,
-  "data": {"url": "https://raw.githubusercontent.com/edward-wong27/Fit3179_Vis2/main/data/New.csv"},
+  "data": {"url": "https://raw.githubusercontent.com/edward-wong27/Fit3179_Vis2/main/data/New.csv","format": {"parse": {"Date": "utc:'%e/%m/%Y'"}}},
 "params": [
+
   {
     "name": "Vehicle_selection",
     "bind":{
