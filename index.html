@@ -18,40 +18,98 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+      h1{
+          text-align: center;
+          font-family: 'Roboto', sans-serif;
+          background-color: cadetblue;
+      }
 
-   
-    </style>
+      h2{
+          text-align: center;
+          background-color: rgb(0, 100, 194);
+          font-family: 'Roboto', sans-serif;
+      }
+
+      p{
+        text-align: center;
+          font-family: 'Roboto', sans-serif;
+      }
+      .Dash{
+            width: 500;
+            height: 2000;
+            background-color: rgb(255, 255, 255);
+        
+        }
+  
+        .page{
+            width: 200;
+            height: 3000;
+        }
+  </style> 
+    
 </head>
 
 <body>
-  <div class="page">
-    <div class = "pure-g">
-      <div class = "pure-u-1-1">
-        <h1> Locations of Car Crashes Around Victoria</h1>
-        <p>This map  highlights all the locations that crashes have occured around victoria from 2000 - 2005</p> 
-      <div id="map" class="vis-container"></div>
-      <div class = "pure-u-1-1">
-        <h1>Total Crashes per Month</h1>
-        <p>This bar chart shows the total crashes per month from 2000 - 2005</p>
-      <div id="Bar" class="vis-container"></div>
-</div>
-</div>
-</div>
-</div>
+ <div class="page">
+   <div class="Dash">
+      <!-- Title Block-->
+      <div Class = "pure-g">
+        <div class="pure-u-1-1">
+          <h1>Victorian Crash Statistics 2000 - 2005</h1>
+        </div>
+      </div>
 
-<div class="page">
-  <div class = "pure-g">
-      <div class = "pure-u-1-2">
-        <h1>Crashes by Region</h1>
-        <p>This bar chart shows the total crashes by Region from 2000 - 2005</p>
-      <div id="Line" class="vis-container"></div>
-      </div>
-      <div class = "pure-u-1-1">
-        <h1>Crashes by Region</h1>
-        <p>This bar chart shows the total crashes by Region from 2000 - 2005</p>
-      <div id="Heat" class="vis-container"></div>
-      </div>
+<!-- Location of Crashes -->
+<h2> Car Crashes Around Victoria</h2>
+   <div class="pure-g">
+    <div class = "pure-u-1-2"> 
+      <div id="map" >
       </div>
     </div>
+  
+      <div class = "pure-u-1-2">
+
+        <p>This map  highlights all the locations that crashes have occured around victoria from 2000 - 2005</p>
+      </div>
+   </div>
+<!-- Count of Crashes based off Region-->
+<h2>Crashes by Region</h2>
+<div class = "pure-g">
+  <div class="pure-u-1-2">
+    <div id="Line"></div>
+  </div>
+  <div class = "pure-u-1-2">
+  
+    <p>This bar chart shows the total crashes by Region from 2000 - 2005</p>
+  </div>
+ </div>
+
+<!-- Total Crashes per Month-->
+<h2>Total Crashes per Month</h2>
+   <div class="pure-g">
+      <div class = "pure-u-1-2">
+        <div id="Bar"></div>
+      </div>
+      <div class = "pure-u-1-2">
+        <p>This bar chart shows the total crashes per month from 2000 - 2005</p>
+      </div>
+     s
+    </div>
+
+
+  
+    
+      <div class = "pure-u-1-1">
+        <h2>Crashes by Region</h2>
+        <p>This bar chart shows the total crashes by Region from 2000 - 2005</p>
+      <div id="Heat"></div>
+      </div>
+      </div>
+  </div>
+</div>
+
+
+    
 </body>
 </html>

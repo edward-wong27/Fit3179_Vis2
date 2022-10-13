@@ -4,7 +4,7 @@
     "data": {"url": "https://raw.githubusercontent.com/edward-wong27/Fit3179_Vis2/main/data/ACCIDENT.csv"},
 "vconcat":[
   {
-    "width": 900,
+    "width": 1000,
     "height": 300,
   "params": [
       {
@@ -26,7 +26,7 @@
     }
   },
   {
-    "width": 900,
+    "width": 1000,
     "height": 60,
      "mark": {
       "type": "line"
@@ -40,8 +40,8 @@
       {"filter": {"param": "Region_selection"}}
 ],
     "encoding": {
-      "x": {"timeUnit": "yearmonth", "field": "Date"},
-      "y": {"aggregate":"count", "field": "ACCIDENT_NO", "type": "quantitative","title":"Total Crashes"},
+      "x": {"timeUnit": "yearmonth", "field": "Date", "title":""},
+      "y": {"aggregate":"count", "field": "ACCIDENT_NO", "type": "quantitative","title":""},
       "color": {"field": "Region_Name", "type": "nominal"}
 
   }
