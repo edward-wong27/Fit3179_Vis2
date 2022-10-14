@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 900,
   "height": 600,
-  "title": "Victorian Crashes",
   "params": [
     {
 "name": "zoom_level",
@@ -22,14 +21,19 @@
 "input": "select",
 "options": [
 [145, -36.95],
-[144.3, -38.1],
-[144.9, -36.7],
-[147.1, -38.1]
+[146.516, -38.183],
+[144.881, -37.692],
+[145.316,-37.97],
+[146.54, -36.476],
+[144.03, -36.149],
+[142.519,-37.95],
+[142.415, -36.245]
 ],
-"labels": ["Melbourne CBD", "Geelong", "Bendigo", "Sale"],
+"labels": ["Centre","EASTERN REGION", "METROPOLITAN NORTH WEST REGION","METROPOLITAN SOUTH EAST REGION", "NORTH EASTERN REGION", "NORTHERN REGION", "SOUTH WESTERN REGION", "WESTERN REGION"],
 "name": "Map Centre: "
 }
 }
+
 ],
   "projection": {"type": "mercator","center": {"expr": "center_to"},"scale": {"expr": "zoom_level"}},
   "layer": [
@@ -44,10 +48,25 @@
       "data": {
         "url": "https://raw.githubusercontent.com/edward-wong27/Fit3179_Vis2/main/data/NODE.csv"
       },
-      "mark": {"type": "circle", "tooltip": {"content": "LGA_NAME"}},
+      "mark": {"type": "circle"},
       "encoding": {
         "longitude": {"field": "Long", "type": "quantitative"},
-        "latitude": {"field": "Lat", "type": "quantitative"}
+        "latitude": {"field": "Lat", "type": "quantitative"},
+        "color": {
+          "field": "Region Name", 
+          "type": "nominal",
+          "scale":{
+            "domain": ["EASTERN REGION", "METROPOLITAN NORTH WEST REGION","METROPOLITAN SOUTH EAST REGION", "NORTH EASTERN REGION", "NORTHERN REGION", "SOUTH WESTERN REGION", "WESTERN REGION"],
+            "range":["#4E79A7","#F28E2B","#76B7B2","#59A14F","#EDC948","#B07AA1","#FF9DA7"]
+          },
+          "title": "Region Name"
+        },
+        "tooltip":[
+          {"field": "Region Name"}, 
+          {"field": "LGA_NAME"},
+          {"field": "Long"},
+          {"field": "Lat"}
+        ]
       }
     }
   ],

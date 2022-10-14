@@ -59,13 +59,13 @@
       "type": "nominal",
       "scale": {
         "domain": ["Car", "Bicycle", "Bus/Coach", "Motor Cycle", "Other Vehicle", "Taxi","Train","Tram", "Truck", "Unknown"],
-        "range": ["#FF0A00", "#00F5FF", "#FFA300", "#005CFF", "#C8FF00","#3700FF","#E62A19","#19D5E6","#7D1CE3","#82E31C"]
+        "range": ["#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2","#D55E00","#CC79A7","#884D9C","#776704","#F0FD82"]
       },
       "title": "Vehicle type"
       },
   "tooltip":[
     {"field": "VehicleType", "type": "nominal"},
-    {"field" : "Date", "timeUnit": "year", "type": "ordinal"},
+    
     {"aggregate": "count", "type": "quantitative", "title": "Crash Count"}
   ]
   }

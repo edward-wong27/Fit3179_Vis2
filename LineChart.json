@@ -22,9 +22,21 @@
     "encoding": {
       "x": {"timeUnit": "yearmonth", "field": "Date","scale": {"domain": {"param": "brush"}}},
       "y": {"aggregate":"count", "field": "ACCIDENT_NO", "type": "quantitative", "title":"Total Crashes"},
-      "color": {"field": "Region_Name", "type": "nominal"}
-    }
-  },
+      "color": {
+        "field": "Region_Name", 
+        "type": "nominal",
+        "scale":{
+          "domain": ["EASTERN REGION", "METROPOLITAN NORTH WEST REGION","METROPOLITAN SOUTH EAST REGION", "NORTH EASTERN REGION", "NORTHERN REGION", "SOUTH WESTERN REGION", "WESTERN REGION"],
+          "range":["#4E79A7","#F28E2B","#76B7B2","#59A14F","#EDC948","#B07AA1","#FF9DA7"]
+        }
+      },
+        "tooltip": [
+          {"field": "Region_Name", "type": "nominal"},
+          {"field" : "Date", "timeUnit": "month", "type": "ordinal"},
+          {"aggregate": "count", "type": "quantitative", "title": "Crash Count"}
+        ]
+      }
+    },
   {
     "width": 1000,
     "height": 60,
@@ -34,7 +46,6 @@
     "params": [
 {"name": "brush", "select": {"type": "interval",
 "encodings": ["x"]}}
-
 ],
 "transform": [
       {"filter": {"param": "Region_selection"}}
@@ -42,7 +53,15 @@
     "encoding": {
       "x": {"timeUnit": "yearmonth", "field": "Date", "title":""},
       "y": {"aggregate":"count", "field": "ACCIDENT_NO", "type": "quantitative","title":""},
-      "color": {"field": "Region_Name", "type": "nominal"}
+      "color": {
+        "field": "Region_Name", 
+        "type": "nominal",
+        "scale":{
+          "domain": ["EASTERN REGION", "METROPOLITAN NORTH WEST REGION","METROPOLITAN SOUTH EAST REGION", "NORTH EASTERN REGION", "NORTHERN REGION", "SOUTH WESTERN REGION", "WESTERN REGION"],
+          "range":["#4E79A7","#F28E2B","#76B7B2","#59A14F","#EDC948","#B07AA1","#FF9DA7"]
+        },
+        "title": "Region Name"
+      }
 
   }
   }
